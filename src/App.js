@@ -35,8 +35,8 @@ export default function App()
     localStorage.removeItem("token" + IP);
     setUserRank(1);
     setRefreshToken(false);
-    setTimeout(() => location.reload(), 500);
-  }; 
+    setTimeout(() => window.location.reload(), 500);
+  };
 
   useEffect(() => {
     const t = localStorage.getItem("token" + IP);
