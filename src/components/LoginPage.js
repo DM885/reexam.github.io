@@ -24,6 +24,7 @@ class LoginPage extends React.Component {
         const values = getInputValues(e.target.elements);
 
         const data = await API.call("POST", "auth/login", values);
+        
         if((data && !data.error))
         {
             this.props.history.push("/");
