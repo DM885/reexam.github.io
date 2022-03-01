@@ -24,7 +24,7 @@ class LoginPage extends React.Component {
         const values = getInputValues(e.target.elements);
 
         const data = await API.call("POST", "auth/login", values);
-        
+
         if((data && !data.error))
         {
             this.props.history.push("/");
@@ -38,7 +38,7 @@ class LoginPage extends React.Component {
     }
 
     render(){
-        // this.props.setRefreshToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEyLCJpYXQiOjE2Mzk5MDUyNjMsImlzcyI6IiJ9.GB35BgJMWVxmJ0pbzjnto89JGrqtbVjbE0oDwERt_Mc", 0);
+         this.props.setRefreshToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEyLCJpYXQiOjE2Mzk5MDUyNjMsImlzcyI6IiJ9.GB35BgJMWVxmJ0pbzjnto89JGrqtbVjbE0oDwERt_Mc", 0);
         return (<div className="d-flex justify-content-center align-items-center vh-100">
             <Spinner visible={this.state.loading} />
             <form onSubmit={e => this.checkLogin(e)} className="d-flex flex-column align-self-center w-25">
