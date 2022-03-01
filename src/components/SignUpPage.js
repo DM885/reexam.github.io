@@ -36,7 +36,7 @@ class SignUpPage extends React.Component {
             this.setState({
                 loading: false,
             });
-            if((data && !data.error))
+            if((data))
             {
                 alert("Your user has been created!");
                 this.props.history.push("/");
