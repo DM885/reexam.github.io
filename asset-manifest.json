@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/static/js/main.b1caf413.chunk.js",
-    "main.js.map": "/static/js/main.b1caf413.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5fd8dc32.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5fd8dc32.js.map",
-    "static/js/2.96c76a24.chunk.js": "/static/js/2.96c76a24.chunk.js",
-    "static/js/2.96c76a24.chunk.js.map": "/static/js/2.96c76a24.chunk.js.map",
-    "static/js/3.eadbd275.chunk.js": "/static/js/3.eadbd275.chunk.js",
-    "static/js/3.eadbd275.chunk.js.map": "/static/js/3.eadbd275.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.96c76a24.chunk.js.LICENSE.txt": "/static/js/2.96c76a24.chunk.js.LICENSE.txt"
+    "main.css": "/reexam.github.io/static/css/main.e6c13ad2.css",
+    "main.js": "/reexam.github.io/static/js/main.784fa227.js",
+    "static/js/787.f3f68feb.chunk.js": "/reexam.github.io/static/js/787.f3f68feb.chunk.js",
+    "index.html": "/reexam.github.io/index.html",
+    "main.e6c13ad2.css.map": "/reexam.github.io/static/css/main.e6c13ad2.css.map",
+    "main.784fa227.js.map": "/reexam.github.io/static/js/main.784fa227.js.map",
+    "787.f3f68feb.chunk.js.map": "/reexam.github.io/static/js/787.f3f68feb.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.5fd8dc32.js",
-    "static/js/2.96c76a24.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.b1caf413.chunk.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.784fa227.js"
   ]
 }
