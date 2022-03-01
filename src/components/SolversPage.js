@@ -85,7 +85,7 @@ export default class SolversPage extends React.Component {
             <table className="table">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">#11</th>
                     <th scope="col">Name</th>
                     <th scope="col">Image</th>
                     </tr>
