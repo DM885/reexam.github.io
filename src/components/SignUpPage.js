@@ -5,9 +5,9 @@ import {Link} from "react-router-dom";
 import Spinner from "./UI/Spinner";
 
 import {API, getInputValues} from "../helpers";
-import App from "../App";
-const cors = require('cors')
-App.use(cors);
+//import App from "../App";
+//const cors = require('cors')
+//App.use(cors);
 
 class SignUpPage extends React.Component {
     state = {
