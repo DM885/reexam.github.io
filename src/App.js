@@ -16,6 +16,7 @@ import {API, IP} from "./helpers"
 import GrafanaRabbitMQPage from './components/GrafanaRabbitMQPage';
 import GrafanaMySQLPage from './components/GrafanaMySQLPage';
 import GrafanaKubernetesPage from './components/GrafanaKubernetesPage';
+const cors = require('cors');
 
 export default function App()
 {
