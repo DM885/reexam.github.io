@@ -69,7 +69,7 @@ export default function App()
                       <Link className="nav-link" to="/">Jobs</Link>
                     </li>
                     {
-                      userRank > 0 && <>
+                      userRank <= 0 && <>
                         <li className="nav-item">
                           <Link className="nav-link" to="/users">Users</Link>
                         </li>
