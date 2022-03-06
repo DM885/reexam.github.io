@@ -283,7 +283,7 @@ class NewRunPage extends React.Component {
                         )
                       }
                       // eslint-disable-next-line react/jsx-no-duplicate-props
-                      min="0"
+                      //min="0"
                       defaultValue={solver.cpuLimit}
                       id="cpuLimit"
                       name="cpuLimit"
