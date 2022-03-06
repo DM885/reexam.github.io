@@ -22,9 +22,9 @@ class GrafanaRabbitMQPage extends React.Component {
               </li>
             </ul>
             <br/>
-            <a role="button" target="_blank"
+            <a role="button" target="_blank" rel= "noopener noreferrer"
                href="https://grafana.smessie.com/d/Kn5xm-gZk/rabbitmq-overview?orgId=1&refresh=15s"
-               className="btn btn-primary" rel="noreferrer">Open RabbitMQ Grafana Dashboard</a>
+               className="btn btn-primary">Open RabbitMQ Grafana Dashboard</a>
           </div>
         </div>
       </div>
