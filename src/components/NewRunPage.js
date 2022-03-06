@@ -1,6 +1,9 @@
 /* eslint-disable camelcase */
 /* eslint-enable camelcase */
+/* eslint-disable*/
+/*eslint-disable-next-line react/jsx-no-duplicate-props*/
 import React from "react";
+import { withRouter } from "react-router-dom";
 import {API, solvers} from "../helpers";
 
 // Create a new component that will produce some HTML where a user can choose multiple Solver from a dropdown and also give a text input for some flags to set.
@@ -279,6 +282,7 @@ class NewRunPage extends React.Component {
                           key
                         )
                       }
+                      // eslint-disable-next-line react/jsx-no-duplicate-props
                       min="0"
                       defaultValue={solver.cpuLimit}
                       id="cpuLimit"
@@ -349,4 +353,4 @@ class NewRunPage extends React.Component {
     }
 }
 
-export default withRouter(NewRunPage);
+export default withRouter(NewRunPage) ;
