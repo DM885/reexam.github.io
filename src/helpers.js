@@ -1,5 +1,5 @@
-export const IP = process.env?.apiURL ?? ((!process.env.NODE_ENV || process.env.NODE_ENV === 'development') && 0 ? "http://localhost:3000/reexam.github.io" : "http://192.168.0.14:3000/reexam.github.io"); // Gateway IP
-//"http://localhost:8080" : "https://dm885.smessie.com")
+export const IP = process.env?.apiURL ??((!process.env.NODE_ENV || process.env.NODE_ENV === 'development') && 0 ? "http://localhost:3000" : "https://dm885.smessie.com"); // Gateway IP
+
 export function getInputValues(elements)
 {
     return [...elements].reduce((obj, curr) => {
