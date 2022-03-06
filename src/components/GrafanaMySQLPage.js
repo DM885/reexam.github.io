@@ -22,7 +22,7 @@ class GrafanaMySQLPage extends React.Component {
               </li>
             </ul>
             <br/>
-            <a role="button" target="_blank"
+            <a role="button" target="_blank" rel= "noopener noreferrer"
                href="https://grafana.smessie.com/d/549c2bf8936f7767ea6ac47c47b00f2a/mysql-exporter-quickstart-and-dashboard?orgId=1&refresh=10s"
                className="btn btn-primary">Open MySQL Grafana Dashboard</a>
           </div>

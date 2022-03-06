@@ -22,7 +22,7 @@ class GrafanaKubernetesPage extends React.Component {
               </li>
             </ul>
             <br/>
-            <a role="button" target="_blank"
+            <a role="button" target="_blank " rel='noopner noreferrer'
                href="https://grafana.smessie.com/d/6581e46e4e5c7ba40a07646395ef7b23/kubernetes-compute-resources-pod?orgId=1&refresh=10s"
                className="btn btn-primary">Open Kubernetes Grafana Dashboard</a>
           </div>
