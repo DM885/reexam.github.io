@@ -107,7 +107,14 @@ class NewRunPage extends React.Component {
           alert("You need to perform solver automatic check!")
           }
         else{
-          const simpleTest = 'string'
+          ```JSX
+          var1 = 2;
+          var2 = 3
+          var3 = var1 + var2 
+            
+            ```
+
+          const simpleTest ='string'
           if(simpleTest){
             alert("Solver satisfy the rule")
           } else{
