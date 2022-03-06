@@ -1,8 +1,6 @@
 /* eslint-disable camelcase */
 /* eslint-enable camelcase */
 import React from "react";
-import {withRouter} from "react-router";
-
 import {API, solvers} from "../helpers";
 
 // Create a new component that will produce some HTML where a user can choose multiple Solver from a dropdown and also give a text input for some flags to set.
@@ -11,11 +9,12 @@ class NewRunPage extends React.Component {
         solver: solvers[0],
         flagA: false,
         flagF: false,
-        cpuLimit: 1,
+        solverAutomaCheck: false,
+        cpuLimit: 1,        
         memoryLimit: 0,
         timeLimit: 0,
         // solverID: 1,
-    };
+    };    
 
     state = {
         models: [],
@@ -98,6 +97,26 @@ class NewRunPage extends React.Component {
         });
     }
 
+    handleAutomaitcCheckBox = () => {
+      if(this.newSolver.solverAutomaCheck){
+        const solverAutomaticCheck = this.data.solvers.some(d => !d.solverId || d.solverId ===-1);
+        if(solverAutomaticCheck){
+          alert("You need to perform solver automatic check!")
+          }
+        else{
+          const simpleTest = 'string'
+          if(simpleTest){
+            alert("Solver satisfy the rule")
+          } else{
+            alert('The selected solver does not satisfy the rule')
+          }
+        }
+      }          
+      else
+      {//hide it}
+    }
+  };
+
     /**
      * Validates, and saves the form data.
      */
@@ -108,6 +127,9 @@ class NewRunPage extends React.Component {
             dataset: this.state.currentDataset,
             solvers: [...this.state.solvers],
         };
+
+        
+        
         const solverCheck = data.solvers.some(d => !d.solverID || d.solverID === -1);
         if(data.model === 0)
         {
@@ -203,10 +225,8 @@ class NewRunPage extends React.Component {
                     <input
                       type="checkbox"
                       id="checkSolever"
-                      onChange={(e) =>
-                        this.updateSolver("checksolver", e.target.checked, key)
-                      }
-                      defaultChecked={solver.flagA}
+                      onChange = {(e) => this.handleAutomaitcCheckBox}                  
+                      defaultChecked={solver.solverAutomaCheck}
                       name="Checksolver"
                     />
                   </div>

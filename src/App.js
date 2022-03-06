@@ -22,6 +22,7 @@ export default function App()
 {
   const [refreshToken, setRefreshTokenState] = useState(false);
   const [userRank, setUserRank] = useState(1);
+  
 
   /**
    * Sets the RefreshToken.
