@@ -68,6 +68,16 @@ class NewRunPage extends React.Component {
         });
     }
 
+    solveAutomaticTestFn() {
+      var1 = 2;
+      var2 = 3;
+      var3 = var1 + var2
+      if (var3 === var1 + var2){
+        return satisfy
+      }
+      return notsatisfy     
+    }
+
     /**
      * Updates the given attribute on the given solver.
      * @param String key 
@@ -107,15 +117,8 @@ class NewRunPage extends React.Component {
           alert("You need to perform solver automatic check!")
           }
         else{
-          ```JSX
-          var1 = 2;
-          var2 = 3
-          var3 = var1 + var2 
-            
-            ```
-
-          const simpleTest ='string'
-          if(simpleTest){
+          const simpleTest =this.solveAutomaticTestFn()
+          if(simpleTest == satisfy){
             alert("Solver satisfy the rule")
           } else{
             alert('The selected solver does not satisfy the rule')
