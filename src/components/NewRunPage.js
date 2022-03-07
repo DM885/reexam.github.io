@@ -20,8 +20,10 @@ class NewRunPage extends React.Component {
     };    
 
     state = {
-        models: [],
-        data: [],
+        models: ['model1', 'model2'],
+        data: ['data1', 'data2'],
+        data1: [],
+        models1: [],
 
         currentModel: 0,
         currentDataset: 0,
@@ -44,7 +46,7 @@ class NewRunPage extends React.Component {
             {
                 console.log("Got resp", resp);
                 this.setState({
-                    models: resp.results,
+                    models1: resp.results,
                 });
             }
         });
@@ -53,7 +55,7 @@ class NewRunPage extends React.Component {
             if(resp && !resp.error)
             {
                 this.setState({
-                    data: resp.results,
+                    data1: resp.results,
                 });
             }
         });
