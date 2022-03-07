@@ -81,7 +81,6 @@ export class AutomaticCheck extends Component {
     </div>
     )}
 }
-
 export default withRouter(AutomaticCheck)
 
 
