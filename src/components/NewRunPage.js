@@ -106,11 +106,11 @@ class NewRunPage extends React.Component {
     const solverAutomaticCheck = this.data.solvers.some(
       (d) => !d.solverId || d.solverId === -1
     );
-
+    const simpleTest = this.solveAutomaticTestFn();
     if (solverAutomaticCheck && this.newSolver.solverAutomaCheck) {
       alert("You need to perform solver automatic check!");
     } else {
-      const simpleTest = this.solveAutomaticTestFn();
+      
       if (simpleTest == satisfy) {
         alert("Solver satisfy the rule");
       } else {
@@ -330,5 +330,4 @@ class NewRunPage extends React.Component {
     );
   }
 }
-
 export default withRouter(NewRunPage) ;
