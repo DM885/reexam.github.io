@@ -52,8 +52,32 @@ export class AutomaticCheck extends Component {
 
   render() {
     return(
-     <div>
-        <h1>Hello </h1>
+     <div className='container'>
+        <h3>Solver Automatic Check </h3>           
+      <select className='form-select form-select-lg mb-2'>        
+      <option id="-1">Please select a solver</option>
+        <option value="oranges">Outrageous Oranges</option>
+        <option value="tomatoes">Technically a Fruit Tomatoes</option>
+        <option value="bananas">Bodacious Bananas</option>
+      </select>      
+        <h5>Solver check</h5>
+            <div className="row">
+              <div className="col-sm-4">
+                <label htmlFor="flagA">Solver automatic check</label>
+              </div>
+              <div className="col-sm-8">
+                <input
+                  type="checkbox"
+                  id="checkSolever"
+                  onChange={(e) => this.handleAutomaitcCheckBox}                  
+                  defaultValue ={this.solverAutomaCheck}
+                  name="Checksolver"
+                />
+              </div>
+            </div>
+        <button className='btn btn-primary'>
+          Add new solver
+      </button>  
     </div>
     )}
 }
