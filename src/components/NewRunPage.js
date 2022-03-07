@@ -70,7 +70,7 @@ class NewRunPage extends React.Component {
 
     solveAutomaticTestFn() {
       var1 = 2;
-      var2 = 3;
+      var2 = 5;
       var3 = var1 + var2
       if (var3 === var1 + var2){
         return satisfy
