@@ -325,6 +325,7 @@ class NewRunPage extends React.Component {
           >
             New solver
           </button>
+          
         </div>
       </div>
     );

@@ -16,6 +16,7 @@ import {API, IP} from "./helpers"
 import GrafanaRabbitMQPage from './components/GrafanaRabbitMQPage';
 import GrafanaMySQLPage from './components/GrafanaMySQLPage';
 import GrafanaKubernetesPage from './components/GrafanaKubernetesPage';
+import AutomaticCheck from "./components/AutomaticCheck";
 
 
 export default function App()
@@ -76,7 +77,7 @@ export default function App()
                         </li>
                         <li className="nav-item">
                           <Link className="nav-link" to="/solvers">Solvers</Link>
-                        </li>
+                        </li>                    
 
                         <li className="nav-item">
                           <Link className="nav-link" to="/log">Logs</Link>
@@ -87,6 +88,9 @@ export default function App()
                         </li>
                       </>
                     }
+                    <li className="nav-item">
+                          <Link className="nav-link" to="/autoCheck">Auto Check</Link>
+                    </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="/" onClick={signOut}>Sign out</Link>
                     </li>
@@ -101,6 +105,9 @@ export default function App()
               <Route exact={true} path="/newRun">
                 <NewRunPage/>
               </Route>
+              <Route exact={true} path="/autoCheck">
+                <AutomaticCheck/>
+              </Route>
               <AdminRoute exact={true} path="/users">
                 <UserListPage/>
               </AdminRoute>
@@ -109,7 +116,7 @@ export default function App()
               </AdminRoute>
               <AdminRoute exact={true} path="/log">
                 <LogPage/>
-              </AdminRoute>
+              </AdminRoute>              
               <AdminRoute exact={true} path="/grafana/RabbitMQ">
                 <GrafanaRabbitMQPage/>
               </AdminRoute>
