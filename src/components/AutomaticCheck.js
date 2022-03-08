@@ -57,7 +57,7 @@ export class AutomaticCheck extends Component {
   render() {
     return (
       <div className="container">
-        <h3>Solver Automatic Check </h3>
+        <h2>Solver Automatic Check </h2>
         <form onSubmit={(e) => this.save(e)}>
           <div className="form-group pb-2">
             <label for="nameInp">Name</label>
