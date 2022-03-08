@@ -11,6 +11,7 @@ export class AutomaticCheck extends Component {
       isAutoCheck: false,
     };
     this.state = {
+      solvers: [],
       satisfy: false,
       notsatisfy: false,
     };
@@ -22,7 +23,7 @@ export class AutomaticCheck extends Component {
       solvers: [
         ...this.state.solvers,
         {
-          ...this.newSolver,
+          ...this.solveToCheck,
         },
       ],
     });
@@ -59,7 +60,7 @@ export class AutomaticCheck extends Component {
       <div className="container">
         <h2>Solver Automatic Check </h2>
         <form onSubmit={(e) => this.save(e)}>
-          <div className="form-group pb-2">
+          <div className="form-group pb-3">
             <label for="nameInp">Name</label>
             <input
               type="input"
@@ -67,6 +68,7 @@ export class AutomaticCheck extends Component {
               className="form-control"
               id="nameInp"
               name="filename"
+              
             />
           </div>
           <div className="form-group pb-2">
@@ -76,6 +78,7 @@ export class AutomaticCheck extends Component {
               type="file"
               onChange={(e) => this.parseFile(e)}
               className="form-control"
+              multiple
             />
           </div>   
         <h5>Solver check</h5>
@@ -96,7 +99,7 @@ export class AutomaticCheck extends Component {
         <div className="btn-group mr-2" role="group">
           <button
             onClick={() => this.addSolver()}
-            className="btn btn-primary mt-2  "
+            className="btn btn-primary mt-2"
           >
             Add Solver
           </button>
