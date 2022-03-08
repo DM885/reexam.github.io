@@ -324,8 +324,7 @@ class NewRunPage extends React.Component {
             className="btn btn-secondary mt-2"
           >
             New solver
-          </button>
-          
+          </button>          
         </div>
       </div>
     );

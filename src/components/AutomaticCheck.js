@@ -4,15 +4,19 @@ import { solvers } from '../helpers'
 
 
 export class AutomaticCheck extends Component {
-  solveToCheck = {
-    solver: solvers[0],
-    isAutoCheck: false
-  };
-  state = {
+  constructor(props) {
+    super(props);
+    this.solveToCheck = {
+      solver: solvers[0],
+      isAutoCheck: false,
+    };
+    this.state = {
       satisfy: false,
-      notsatisfy:false
-  };
-
+      notsatisfy: false,
+    };
+    
+  }
+  
   addSolver() {
     this.setState({
       solvers: [
@@ -24,22 +28,22 @@ export class AutomaticCheck extends Component {
     });
   }
 
-  solveAutomaticTestFn =() => {
-   const var1 = 2;
-   const var2 = 5;
-   const var3 = var1 + var2;   
+  solveAutomaticTestFn = () => {
+    const var1 = 2;
+    const var2 = 5;
+    const var3 = var1 + var2;
     if (var3 === var1 + var2) {
       return this.satisfy;
     }
     return this.notsatisfy;
-  }
+  };
 
   handleAutomaitcCheckBox = () => {
-    const solverAutomaticCheck = this.data.solvers.some(
+    const getSolver = this.data.solvers.some(
       (d) => !d.solverId || d.solverId === -1
     );
     const simpleTest = this.solveAutomaticTestFn();
-    if (solverAutomaticCheck && this.newSolver.solverAutomaCheck) {
+    if (getSolver && this.solveToCheck.isAutoCheck) {
       alert("You need to perform solver automatic check!");
     } else {
       if (simpleTest === this.satisfy) {
@@ -51,35 +55,57 @@ export class AutomaticCheck extends Component {
   };
 
   render() {
-    return(
-     <div className='container'>
-        <h3>Solver Automatic Check </h3>           
-      <select className='form-select form-select-lg mb-2'>        
-      <option id="-1">Please select a solver</option>
-        <option value="oranges">Outrageous Oranges</option>
-        <option value="tomatoes">Technically a Fruit Tomatoes</option>
-        <option value="bananas">Bodacious Bananas</option>
-      </select>      
+    return (
+      <div className="container">
+        <h3>Solver Automatic Check </h3>
+        <form onSubmit={(e) => this.save(e)}>
+          <div className="form-group pb-2">
+            <label for="nameInp">Name</label>
+            <input
+              type="input"
+              placeholder="data name"
+              className="form-control"
+              id="nameInp"
+              name="filename"
+            />
+          </div>
+          <div className="form-group pb-2">
+            <label for="contentInp">Model</label>
+            <input
+              id="contentInp"
+              type="file"
+              onChange={(e) => this.parseFile(e)}
+              className="form-control"
+            />
+          </div>   
         <h5>Solver check</h5>
-            <div className="row">
-              <div className="col-sm-4">
-                <label htmlFor="flagA">Solver automatic check</label>
-              </div>
-              <div className="col-sm-8">
-                <input
-                  type="checkbox"
-                  id="checkSolever"
-                  onChange={(e) => this.handleAutomaitcCheckBox}                  
-                  defaultValue ={this.solverAutomaCheck}
-                  name="Checksolver"
-                />
-              </div>
-            </div>
-        <button className='btn btn-primary'>
-          Add new solver
-      </button>  
-    </div>
-    )}
+        <div className="row">
+          <div className="col-sm-4">
+            <label htmlFor="flagA">Solver automatic check</label>
+          </div>
+          <div className="col-sm-8">
+            <input
+              type="checkbox"
+              id="checkSolever"
+              onChange={(e) => this.handleAutomaitcCheckBox}
+              defaultValue={this.solverAutomaCheck}
+              name="Checksolver"
+            />
+          </div>
+        </div>
+        <div className="btn-group mr-2" role="group">
+          <button
+            onClick={() => this.addSolver()}
+            className="btn btn-primary mt-2  "
+          >
+            Add Solver
+          </button>
+          
+        </div>
+        </form>
+      </div>
+    );
+  }
 }
 export default withRouter(AutomaticCheck)
 
