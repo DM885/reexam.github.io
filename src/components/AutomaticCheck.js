@@ -64,7 +64,7 @@ export class AutomaticCheck extends Component {
             <label for="nameInp">Name</label>
             <input
               type="input"
-              placeholder="data name"
+              placeholder="solver name"
               className="form-control"
               id="nameInp"
               name="filename"
@@ -72,7 +72,7 @@ export class AutomaticCheck extends Component {
             />
           </div>
           <div className="form-group pb-2">
-            <label for="contentInp">Model</label>
+            <label for="contentInp">New Solver</label>
             <input
               id="contentInp"
               type="file"
