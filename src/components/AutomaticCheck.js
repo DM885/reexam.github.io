@@ -30,8 +30,8 @@ export class AutomaticCheck extends Component {
   }
 
   solveAutomaticTestFn = () => {
-    const var1 = 2;
-    const var2 = 5;
+    var var1 = 2;
+    var var2 = 5;    
     const var3 = var1 + var2;
     if (var3 === var1 + var2) {
       return this.satisfy;
@@ -101,7 +101,7 @@ export class AutomaticCheck extends Component {
             onClick={() => this.addSolver()}
             className="btn btn-primary mt-2"
           >
-            Add Solver
+            Add new Solver
           </button>
           
         </div>
