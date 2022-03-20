@@ -12,7 +12,7 @@ export class AutomaticCheck extends Component {
     };
     this.state = {
       solvers: [],
-      satisfy: false,
+      satisfy: true,
       notsatisfy: false,
     };
     
@@ -101,7 +101,7 @@ export class AutomaticCheck extends Component {
             onClick={() => this.addSolver()}
             className="btn btn-primary mt-2"
           >
-            Add  Solver
+            Add new  Solver
           </button>
           
         </div>
