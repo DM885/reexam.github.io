@@ -101,7 +101,7 @@ export class AutomaticCheck extends Component {
             onClick={() => this.addSolver()}
             className="btn btn-primary mt-2"
           >
-            Add Solver
+            Add new Solver
           </button>
           
         </div>
